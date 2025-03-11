@@ -6,15 +6,57 @@
     <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Assets\logo.png" />
+    <None Remove="Assets\Беляева.jpeg" />
+    <None Remove="Assets\Добавить.png" />
+    <None Remove="Assets\Иванов.jpeg" />
+    <None Remove="Assets\Игнатов.jpg" />
+    <None Remove="Assets\Миронов.jpeg" />
+    <None Remove="Assets\Петров.jpeg" />
+    <None Remove="Assets\Смирнова.jpeg" />
+    <None Remove="Assets\Стрелков.jpeg" />
+    <None Remove="Assets\Федоров.jpeg" />
+    <None Remove="Assets\Хохлов.jpeg" />
+    <None Remove="Assets\Ширяев.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\logo.png" />
+    <AvaloniaResource Include="Assets\Беляева.jpeg" />
+    <AvaloniaResource Include="Assets\Добавить.png" />
+    <AvaloniaResource Include="Assets\Иванов.jpeg" />
+    <AvaloniaResource Include="Assets\Игнатов.jpg" />
+    <AvaloniaResource Include="Assets\Миронов.jpeg" />
+    <AvaloniaResource Include="Assets\Петров.jpeg" />
+    <AvaloniaResource Include="Assets\Смирнова.jpeg" />
+    <AvaloniaResource Include="Assets\Стрелков.jpeg" />
+    <AvaloniaResource Include="Assets\Федоров.jpeg" />
+    <AvaloniaResource Include="Assets\Хохлов.jpeg" />
+    <AvaloniaResource Include="Assets\Ширяев.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
 
 
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="11.0.6" />
-    <PackageReference Include="Avalonia.Desktop" Version="11.0.6" />
-    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.6" />
-    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.6" />
+    <PackageReference Include="Avalonia" Version="11.2.5" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.2.5" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.5" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.5" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.6" />
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.2.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Helper\" />
   </ItemGroup>
 </Project>
