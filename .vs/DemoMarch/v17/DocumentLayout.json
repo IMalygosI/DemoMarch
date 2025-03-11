@@ -1,12 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\class_student\\Desktop\\\u0423\u0434\u0430\u043B\u044C\u0446\u043E\u0432\\DemoMarch\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E2359BF2-D1BD-462A-B384-9445841757B5}|DemoMarch\\DemoMarch.csproj|c:\\users\\class_student\\desktop\\\u0443\u0434\u0430\u043B\u044C\u0446\u043E\u0432\\demomarch\\demomarch\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{E2359BF2-D1BD-462A-B384-9445841757B5}|DemoMarch\\DemoMarch.csproj|solutionrelative:demomarch\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\class_student\\Desktop\\\u0423\u0434\u0430\u043B\u044C\u0446\u043E\u0432\\DemoMarch\\DemoMarch\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "DemoMarch\\MainWindow.axaml",
+              "ToolTip": "C:\\Users\\class_student\\Desktop\\\u0423\u0434\u0430\u043B\u044C\u0446\u043E\u0432\\DemoMarch\\DemoMarch\\MainWindow.axaml",
+              "RelativeToolTip": "DemoMarch\\MainWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-11T13:07:02.213Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
