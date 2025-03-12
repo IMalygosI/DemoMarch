@@ -22,6 +22,8 @@ public partial class DimaBaseContext : DbContext
 
     public virtual DbSet<Order> Orders { get; set; }
 
+    public virtual DbSet<Passport> Passports { get; set; }
+
     public virtual DbSet<Post> Posts { get; set; }
 
     public virtual DbSet<Service> Services { get; set; }
@@ -52,6 +54,10 @@ public partial class DimaBaseContext : DbContext
                 .HasMaxLength(255)
                 .HasColumnName("FIO");
             entity.Property(e => e.Password).HasColumnType("character varying");
+
+            entity.HasOne(d => d.PassportNavigation).WithMany(p => p.Clients)
+                .HasForeignKey(d => d.Passport)
+                .HasConstraintName("client_passport_fk");
 
             entity.HasMany(d => d.Employees).WithMany(p => p.Clients)
                 .UsingEntity<Dictionary<string, object>>(
@@ -163,6 +169,20 @@ public partial class DimaBaseContext : DbContext
                         j.IndexerProperty<int>("OrderIdServise").HasColumnName("Order_ID_Servise");
                         j.IndexerProperty<int>("ServiseId").HasColumnName("Servise_ID");
                     });
+        });
+
+        modelBuilder.Entity<Passport>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("passport_pk");
+
+            entity.ToTable("Passport", "DemoMarch");
+
+            entity.Property(e => e.Id)
+                .UseIdentityAlwaysColumn()
+                .HasColumnName("id");
+            entity.Property(e => e.IdClient).HasColumnName("id_client");
+            entity.Property(e => e.NumberPassport).HasColumnName("number_passport");
+            entity.Property(e => e.SetialPassport).HasColumnName("setial_passport");
         });
 
         modelBuilder.Entity<Post>(entity =>

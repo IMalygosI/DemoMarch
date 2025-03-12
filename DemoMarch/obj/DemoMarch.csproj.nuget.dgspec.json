@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\class_student\\Desktop\\Удальцов\\DemoMarch\\DemoMarch\\DemoMarch.csproj": {}
+    "C:\\Users\\prdb\\Desktop\\Дмитрий\\DemoMarch\\DemoMarch\\DemoMarch.csproj": {}
   },
   "projects": {
-    "C:\\Users\\class_student\\Desktop\\Удальцов\\DemoMarch\\DemoMarch\\DemoMarch.csproj": {
+    "C:\\Users\\prdb\\Desktop\\Дмитрий\\DemoMarch\\DemoMarch\\DemoMarch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\class_student\\Desktop\\Удальцов\\DemoMarch\\DemoMarch\\DemoMarch.csproj",
+        "projectUniqueName": "C:\\Users\\prdb\\Desktop\\Дмитрий\\DemoMarch\\DemoMarch\\DemoMarch.csproj",
         "projectName": "DemoMarch",
-        "projectPath": "C:\\Users\\class_student\\Desktop\\Удальцов\\DemoMarch\\DemoMarch\\DemoMarch.csproj",
-        "packagesPath": "C:\\Users\\class_student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\class_student\\Desktop\\Удальцов\\DemoMarch\\DemoMarch\\obj\\",
+        "projectPath": "C:\\Users\\prdb\\Desktop\\Дмитрий\\DemoMarch\\DemoMarch\\DemoMarch.csproj",
+        "packagesPath": "C:\\Users\\prdb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\prdb\\Desktop\\Дмитрий\\DemoMarch\\DemoMarch\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\class_student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\prdb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,6 +65,10 @@
               "target": "Package",
               "version": "[11.2.5, )"
             },
+            "MessageBox.Avalonia": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -92,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

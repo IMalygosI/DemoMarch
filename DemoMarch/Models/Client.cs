@@ -11,7 +11,7 @@ public partial class Client
 
     public int? ClientCode { get; set; }
 
-    public string? Passport { get; set; }
+    public int? Passport { get; set; }
 
     public DateOnly? DateBirthday { get; set; }
 
@@ -20,6 +20,8 @@ public partial class Client
     public string? Email { get; set; }
 
     public string? Password { get; set; }
+
+    public virtual Passport? PassportNavigation { get; set; }
 
     public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
 
