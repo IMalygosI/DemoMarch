@@ -6,10 +6,12 @@
 		x:CompileBindings="False"
         x:Class="DemoMarch.GlavnoeOkko"
         Title="Услуги">
+	
 
 	<Grid ShowGridLines="False"
 		  ColumnDefinitions="*,*,*,*,*"
 		  RowDefinitions="0.4*,*,*,*,0.2*">
+		
 
 		<Grid Grid.Row="0"
 			  Grid.Column="0"
@@ -49,9 +51,7 @@
 				 Margin="10"
 				 Background="#92d050"
 				 BorderThickness="2"
-				 Name="ListBox_servise">
-
-	
+				 Name="ListBox_servise">	
 			
 			<ListBox.ItemTemplate>
 				<DataTemplate>
@@ -96,8 +96,10 @@
 				Name="Logout"
 				Click="Button_Click_Logout"
 				Background="#349c3d">
+			
 			<TextBlock Text="Выйти"
 					   Foreground="White"/>
+			
 		</Button>		
 		
 	</Grid>

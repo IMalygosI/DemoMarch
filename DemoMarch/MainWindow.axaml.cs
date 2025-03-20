@@ -49,8 +49,10 @@ namespace DemoMarch
         /// </summary>
         private void UpdateCaptcha()
         {
+
             string ratdomText = GenerateStringCapcha(7);
             CapchaText.Text = ratdomText;
+
         }
 
         /// <summary>

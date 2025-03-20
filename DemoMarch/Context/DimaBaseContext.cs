@@ -16,6 +16,7 @@ public partial class DimaBaseContext : DbContext
     {
     }
 
+
     public virtual DbSet<Client> Clients { get; set; }
 
     public virtual DbSet<Employee> Employees { get; set; }

@@ -48,11 +48,11 @@ public partial class GlavnoeOkko : Window
     /// </summary>
     public void Loang() 
     {
+
         services = Helper.DateBase.Services.ToList();
         ListBox_servise.ItemsSource = services;
+
     }
-
-
 
     /// <summary>
     /// Выход к профилю

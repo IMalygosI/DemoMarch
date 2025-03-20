@@ -17,6 +17,7 @@ public partial class Profile : Window
         Client1 = new Client();
     }
 
+
     /// <summary>
     /// ¬ход под пользователем Employee
     /// </summary>

@@ -12,6 +12,7 @@ public partial class History : Window
 {
     List<Employee> history = new List<Employee>();
     Employee Employee1;
+
     public History()
     {
         InitializeComponent();

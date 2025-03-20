@@ -24,8 +24,10 @@
 					Grid.Column="0"
 					Grid.ColumnSpan="2"
 					Grid.RowSpan="4">
+				
 
 				<Image Source="/Assets/logo.png"/>
+				
 
 			</Border>
 

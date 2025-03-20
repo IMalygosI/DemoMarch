@@ -26,6 +26,8 @@ public partial class Basket : Window
     {
 
 
+
+
     }
 
     private void Button_Click_Logout(object? sender, Avalonia.Interactivity.RoutedEventArgs e)

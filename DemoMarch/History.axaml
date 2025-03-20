@@ -29,7 +29,8 @@
 				<Image Source="/Assets/logo.png"/>
 
 			</Border>
-
+ 
+			
 			<TextBlock Text="Приэльбрусье"
 					   Grid.Row="0"
 					   Grid.Column="2"
