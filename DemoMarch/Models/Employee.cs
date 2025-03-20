@@ -26,4 +26,8 @@ public partial class Employee
     public virtual TypeOfEntrance TypeOfEntrance { get; set; } = null!;
 
     public virtual ICollection<Client> Clients { get; set; } = new List<Client>();
+    
+    public string PostJob => PostId == 1 ? "Администратор" :
+                             PostId == 2 ? "Продавец" :
+                             PostId == 3 ? "Старший смены" : "Post";
 }

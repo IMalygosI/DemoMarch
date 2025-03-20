@@ -2,11 +2,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" Width="1920" Height="1080"
+        mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080"
+        x:Class="DemoMarch.Basket"
 		x:CompileBindings="False"
-        x:Class="DemoMarch.GlavnoeOkko"
-        Title="Услуги">
-
+        Title="Basket">
 	<Grid ShowGridLines="False"
 		  ColumnDefinitions="*,*,*,*,*"
 		  RowDefinitions="0.4*,*,*,*,0.2*">
@@ -49,10 +48,8 @@
 				 Margin="10"
 				 Background="#92d050"
 				 BorderThickness="2"
-				 Name="ListBox_servise">
+				 Name="ListBox_Order">
 
-	
-			
 			<ListBox.ItemTemplate>
 				<DataTemplate>
 					<Border Margin="5"
@@ -64,25 +61,15 @@
 							  RowDefinitions="*">
 
 							<StackPanel Margin="10">
-								
+
 								<DockPanel>
 									<TextBlock Text="Наименование:"/>
-									<TextBlock Text="{Binding Name}"/>
+									<TextBlock Text=""/>
 								</DockPanel>
 
-								<DockPanel>
-									<TextBlock Text="Код услуги:"/>
-									<TextBlock Text="{Binding CodeServices}"/>
-								</DockPanel>
 
-								<DockPanel>
-									<TextBlock Text="Цена: "/>
-									<TextBlock Text="{Binding CostRubPerHour}"/>
-									<TextBlock Text=" руб."/>
-								</DockPanel>
-								
 							</StackPanel>
-							
+
 						</Grid>
 					</Border>
 				</DataTemplate>
@@ -94,11 +81,11 @@
 				VerticalAlignment="Top"
 				Margin="15"
 				Name="Logout"
-				Click="Button_Click_Logout"
+			    Click="Button_Click_Logout"
 				Background="#349c3d">
 			<TextBlock Text="Выйти"
 					   Foreground="White"/>
-		</Button>		
-		
+		</Button>
+
 	</Grid>
 </Window>

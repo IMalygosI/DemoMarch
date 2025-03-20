@@ -4,9 +4,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" Width="1920" Height="1080"
 		x:CompileBindings="False"
-        x:Class="DemoMarch.GlavnoeOkko"
-        Title="Услуги">
-
+        x:Class="DemoMarch.History"
+        Title="History">
+	
 	<Grid ShowGridLines="False"
 		  ColumnDefinitions="*,*,*,*,*"
 		  RowDefinitions="0.4*,*,*,*,0.2*">
@@ -49,40 +49,41 @@
 				 Margin="10"
 				 Background="#92d050"
 				 BorderThickness="2"
-				 Name="ListBox_servise">
-
-	
-			
+				 Name="ListBox_History">
 			<ListBox.ItemTemplate>
 				<DataTemplate>
 					<Border Margin="5"
-							Background="White"
 							BorderThickness="1"
+							Background="White"
 							BorderBrush="Black">
 						<Grid ShowGridLines="True"
 							  ColumnDefinitions="*"
 							  RowDefinitions="*">
-
+							
 							<StackPanel Margin="10">
 								
 								<DockPanel>
-									<TextBlock Text="Наименование:"/>
-									<TextBlock Text="{Binding Name}"/>
+									<TextBlock Text="ФИО: "/>
+									<TextBlock Text="{Binding Fio}"/>
 								</DockPanel>
 
 								<DockPanel>
-									<TextBlock Text="Код услуги:"/>
-									<TextBlock Text="{Binding CodeServices}"/>
+									<TextBlock Text="Роль: "/>
+									<TextBlock Text="{Binding Post.Name}"/>
 								</DockPanel>
 
 								<DockPanel>
-									<TextBlock Text="Цена: "/>
-									<TextBlock Text="{Binding CostRubPerHour}"/>
-									<TextBlock Text=" руб."/>
+									<TextBlock Text="Последний вход: "/>
+									<TextBlock Text="{Binding LastEntry}"/>
+								</DockPanel>
+
+								<DockPanel>
+									<TextBlock Text="Вход: "/>
+									<TextBlock Text="{Binding TypeOfEntrance.Name}"/>
 								</DockPanel>
 								
 							</StackPanel>
-							
+
 						</Grid>
 					</Border>
 				</DataTemplate>
@@ -96,9 +97,9 @@
 				Name="Logout"
 				Click="Button_Click_Logout"
 				Background="#349c3d">
-			<TextBlock Text="Выйти"
+			<TextBlock Text="Назад"
 					   Foreground="White"/>
-		</Button>		
-		
+		</Button>
+
 	</Grid>
 </Window>

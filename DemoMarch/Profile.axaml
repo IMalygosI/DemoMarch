@@ -1,0 +1,154 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080" 
+		x:CompileBindings="False"
+        x:Class="DemoMarch.Profile"
+        Title="Профиль">
+
+	<Grid ShowGridLines="False"
+		  ColumnDefinitions="*,*,*,*,*"
+		  RowDefinitions="0.4*,*,*,*,0.2*">
+
+		<Grid Grid.Row="0"
+			  Grid.Column="0"
+			  ShowGridLines="False"
+			  ColumnDefinitions="*,*,*,*,*"
+			  RowDefinitions="*,*,*,*">
+
+			<Border BorderBrush="Black"
+					BorderThickness="0"
+					Margin="10"
+					CornerRadius="10"
+					Grid.Row="0"
+					Grid.Column="0"
+					Grid.ColumnSpan="2"
+					Grid.RowSpan="4">
+
+				<Image Source="/Assets/logo.png"/>
+
+			</Border>
+
+			<TextBlock Text="Приэльбрусье"
+					   Grid.Row="0"
+					   Grid.Column="2"
+					   Grid.ColumnSpan="3"
+					   Grid.RowSpan="4"
+					   Margin="10 0 0 0"
+					   HorizontalAlignment="Left"
+					   VerticalAlignment="Center"
+					   TextWrapping="Wrap"
+					   TextAlignment="Center"
+					   FontWeight="Bold"/>
+		</Grid>
+
+		
+		<Border Grid.Column="0"
+				Grid.Row="1"
+				Grid.ColumnSpan="2"
+				Grid.RowSpan="3"
+				Margin="40"
+				BorderThickness="2"
+				BorderBrush="Gray"
+				CornerRadius="20">
+
+				<Image Source="avares://DemoMarch/Assets/Игнатов.jpg"
+					   Name="PersonalImage"
+					   VerticalAlignment="Center"
+					   HorizontalAlignment="Center"/>
+
+			</Border>
+
+		<StackPanel Grid.Row="4"
+					Grid.ColumnSpan="2">
+			
+		<TextBlock Text="Fio"
+				   Name="FioName"
+				   FontWeight="Bold"
+				   HorizontalAlignment="Center"
+				   VerticalAlignment="Top"/>
+
+			<TextBlock Text="Post"
+					   Margin="0 5 0 0"
+					   Name="Post"
+					   FontWeight="Bold"
+					   HorizontalAlignment="Center"
+					   VerticalAlignment="Top"/>
+
+		</StackPanel>
+
+		<StackPanel Grid.Column="2"
+					Grid.Row="1"
+					Grid.ColumnSpan="2"
+					Grid.RowSpan="3"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center">
+
+			<Button Name="Orders"
+					IsVisible="False"
+					Height="45"
+					Click="Button_Click_Orders"
+					Width="500"
+					Background="#349c3d">
+				<TextBlock Text="Сформировать заказ"
+						   FontSize="20"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   Foreground="White"/>
+			</Button>
+
+			<Button Name="Orders_Prinat"
+					IsVisible="False"
+					Height="45"
+					Width="500"
+					Background="#349c3d">
+				<TextBlock Text="Принять товар"
+						   FontSize="20"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   Foreground="White"/>
+			</Button>
+
+			<Button Name="History"
+					IsVisible="False"
+					Height="45"
+					Width="500"
+					Click="Button_Click_History"
+					Background="#349c3d">
+				<TextBlock Text="История входа"
+						   FontSize="20"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   Foreground="White"/>
+			</Button>
+
+			<Button Name="Othet"
+					IsVisible="False"
+					Height="45"
+					Width="500"
+					Background="#349c3d">
+				<TextBlock Text="Сформировать отчет"
+						   FontSize="20"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   Foreground="White"/>
+			</Button>
+
+
+		</StackPanel>
+		
+
+		<Button Grid.Column="4"
+				HorizontalAlignment="Right"
+				VerticalAlignment="Top"
+				Margin="15"
+				Name="Logout"
+				Click="Button_Click_Logout"
+				Background="#349c3d">
+			<TextBlock Text="Выйти"
+					   Foreground="White"/>
+		</Button>
+
+	</Grid>
+</Window>

@@ -5,6 +5,7 @@
         mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="250"
 		MaxHeight="200" MinHeight="250"
 		MaxWidth="450"  MinWidth="450"
+		WindowState="Normal"
         x:Class="DemoMarch.Error"
         Title="Ошибка">
 	<Grid ShowGridLines="False"
@@ -20,6 +21,7 @@
 				VerticalAlignment="Center"
 				Grid.Row="1"
 				Width="150"
+				Click="Button_Click"
 				Background="#259c41">
 			<TextBlock Text="Ок"
 					   HorizontalAlignment="Center"

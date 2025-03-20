@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\prdb\\Desktop\\Дмитрий\\DemoMarch\\DemoMarch\\DemoMarch.csproj": {}
+    "C:\\Users\\Class_Student\\Desktop\\Дмитрий\\DemoMarch\\DemoMarch\\DemoMarch.csproj": {}
   },
   "projects": {
-    "C:\\Users\\prdb\\Desktop\\Дмитрий\\DemoMarch\\DemoMarch\\DemoMarch.csproj": {
+    "C:\\Users\\Class_Student\\Desktop\\Дмитрий\\DemoMarch\\DemoMarch\\DemoMarch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\prdb\\Desktop\\Дмитрий\\DemoMarch\\DemoMarch\\DemoMarch.csproj",
+        "projectUniqueName": "C:\\Users\\Class_Student\\Desktop\\Дмитрий\\DemoMarch\\DemoMarch\\DemoMarch.csproj",
         "projectName": "DemoMarch",
-        "projectPath": "C:\\Users\\prdb\\Desktop\\Дмитрий\\DemoMarch\\DemoMarch\\DemoMarch.csproj",
-        "packagesPath": "C:\\Users\\prdb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\prdb\\Desktop\\Дмитрий\\DemoMarch\\DemoMarch\\obj\\",
+        "projectPath": "C:\\Users\\Class_Student\\Desktop\\Дмитрий\\DemoMarch\\DemoMarch\\DemoMarch.csproj",
+        "packagesPath": "C:\\Users\\Class_Student\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Class_Student\\Desktop\\Дмитрий\\DemoMarch\\DemoMarch\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\prdb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Class_Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -96,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
