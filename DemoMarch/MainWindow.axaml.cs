@@ -62,56 +62,33 @@ namespace DemoMarch
         /// <param name="e"></param>
         private void Button_Click_Entrance(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
         {
-            var User = Helper.DateBase.Employees.FirstOrDefault(a => a.Password == passworld.Text && a.Login == login.Text);
-            var User2 = Helper.DateBase.Clients.FirstOrDefault(a => a.Password == passworld.Text && a.Email == login.Text);
+            var User = Helper.DateBase.Employees.FirstOrDefault(a => a.Login == login.Text);
+
+            bool isSuccessfulAttempt = false; 
 
             if (war != true)
             {
-                if (User != null || User2 != null)
+                if (User != null)
                 {
-                    if (User != null)
+                    if (User.Password == passworld.Text && CapchaText.Text != null && CapchaTextBox.Text != null && CapchaText.Text == CapchaTextBox.Text)
                     {
-                        if (CapchaText.Text != null && CapchaTextBox.Text != null && CapchaText.Text == CapchaTextBox.Text)
-                        {
-                            Profile profile = new Profile(User);
-                            profile.Show();
-                            Close();
-                            CapchaText.IsVisible = false;
-                            CapchaTextBox.IsVisible = false;
-                        }
-                        else
-                        {
-                            string Warning = "Ошибка! Ввод Капчи, Логина или Пароля неверен!";
-                            Error error = new Error(Warning);
-                            error.ShowDialog(this);
-
-                            Entrance_Vhod.IsVisible = false;
-
-                            isvisible();
-                            UpdateCaptcha();
-                        }
+                        isSuccessfulAttempt = true; 
+                        Profile profile = new Profile(User);
+                        profile.Show();
+                        Close();
+                        CapchaText.IsVisible = false;
+                        CapchaTextBox.IsVisible = false;
                     }
-                    else if (User2 != null)
+                    else
                     {
-                        if (CapchaText.Text != null && CapchaTextBox.Text != null && CapchaText.Text == CapchaTextBox.Text)
-                        {
-                            Profile glavnoeOkko = new Profile(User2);
-                            glavnoeOkko.Show();
-                            Close();
-                            CapchaText.IsVisible = false;
-                            CapchaTextBox.IsVisible = false;
-                        }
-                        else
-                        {
-                            string Warning = "Ошибка! Ввод Капчи, Логина или Пароля неверен!";
-                            Error error = new Error(Warning);
-                            error.ShowDialog(this);
+                        string Warning = "Ошибка! Ввод Капчи, Логина или Пароля неверен!";
+                        Error error = new Error(Warning);
+                        error.ShowDialog(this);
 
-                            Entrance_Vhod.IsVisible = false;
+                        Entrance_Vhod.IsVisible = false;
 
-                            isvisible();
-                            UpdateCaptcha();
-                        }
+                        isvisible();
+                        UpdateCaptcha();
                     }
                 }
                 else
@@ -123,20 +100,12 @@ namespace DemoMarch
             }
             else
             {
-                if (User != null || User2 != null)
+                if (User != null && User.Password == passworld.Text)
                 {
-                    if (User != null)
-                    {
-                        Profile glavnoeOkko = new Profile(User);
-                        glavnoeOkko.Show();
-                        Close();
-                    }
-                    else if(User2 != null)
-                    {
-                        Profile glavnoeOkko = new Profile(User2);
-                        glavnoeOkko.Show();
-                        Close();
-                    }
+                    isSuccessfulAttempt = true;
+                    Profile profile = new Profile(User);
+                    profile.Show();
+                    Close();
                 }
                 else
                 {
@@ -149,6 +118,25 @@ namespace DemoMarch
                     Error error = new Error(Warning);
                     error.ShowDialog(this);
                     UpdateCaptcha();
+                }
+            }
+
+            // Обновление данных входа в БД
+            if (User != null)
+            {
+                User.LastEntry = DateOnly.FromDateTime(DateTime.Now); // Установка текущей даты
+                User.TypeOfEntranceId = isSuccessfulAttempt ? 1 : 2; // 1 - успешно, 2 - неуспешно
+                Helper.DateBase.SaveChanges();
+            }
+            else
+            {
+                // Если пользователь не найден, но логин был введён
+                var userWithLogin = Helper.DateBase.Employees.FirstOrDefault(a => a.Login == login.Text);
+                if (userWithLogin != null)
+                {
+                    userWithLogin.LastEntry = DateOnly.FromDateTime(DateTime.Now); // Установка текущей даты
+                    userWithLogin.TypeOfEntranceId = 2; // Неуспешная попытка
+                    Helper.DateBase.SaveChanges();
                 }
             }
         }

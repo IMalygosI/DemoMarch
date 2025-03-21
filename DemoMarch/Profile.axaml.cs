@@ -29,6 +29,7 @@ public partial class Profile : Window
 
         FioName.Text = Employee1.Fio;
         Post.Text = Employee1.PostJob;
+        PersonalImage.Source = Employee1.ImageSourse;
 
         if (Employee1.PostId == 1) // јдмин Х администратор точки проката может сформировать отчеты, проконтролировать всех пользователей по истории входа, работать с данными о расходных материалах,  используемых на точке проката.
         {

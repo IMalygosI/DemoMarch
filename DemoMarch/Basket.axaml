@@ -65,10 +65,15 @@
 							<StackPanel Margin="10">
 
 								<DockPanel>
-									<TextBlock Text="Наименование:"/>
+									<TextBlock Text="Наименование услуги:"/>
 									<TextBlock Text=""/>
 								</DockPanel>
 
+
+								<DockPanel>
+									<TextBlock Text="Цена услуги:"/>
+									<TextBlock Text=""/>
+								</DockPanel>
 
 							</StackPanel>
 

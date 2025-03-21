@@ -8,6 +8,7 @@
         Title="Профиль">
 
 	<Grid ShowGridLines="False"
+		  Name="PPPPPP"
 		  ColumnDefinitions="*,*,*,*,*"
 		  RowDefinitions="0.4*,*,*,*,0.2*">
 
@@ -54,7 +55,7 @@
 				BorderBrush="Gray"
 				CornerRadius="20">
 
-				<Image Source="avares://DemoMarch/Assets/Игнатов.jpg"
+				<Image Source=""
 					   Name="PersonalImage"
 					   VerticalAlignment="Center"
 					   HorizontalAlignment="Center"/>

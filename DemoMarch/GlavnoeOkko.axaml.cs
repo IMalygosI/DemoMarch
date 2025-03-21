@@ -65,4 +65,19 @@ public partial class GlavnoeOkko : Window
         profile.Show();
         Close();
     }
+
+    private void MenuItem_Click_Basket(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        var tovar = ListBox_servise.SelectedItem as Service;
+
+
+
+    }
+
+    private void Button_Click_Baskeet(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    {
+        Basket basket = new Basket(Employee1);  
+        basket.Show();
+        Close();
+    }
 }

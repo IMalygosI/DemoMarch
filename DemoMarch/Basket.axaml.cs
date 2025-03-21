@@ -2,6 +2,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using DemoMarch.Models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DemoMarch;
@@ -9,6 +10,7 @@ namespace DemoMarch;
 public partial class Basket : Window
 {
     Employee Employee1;
+    List<Basket> baskets = new List<Basket>();
     public Basket()
     {
         InitializeComponent();

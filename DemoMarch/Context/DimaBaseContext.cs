@@ -16,7 +16,6 @@ public partial class DimaBaseContext : DbContext
     {
     }
 
-
     public virtual DbSet<Client> Clients { get; set; }
 
     public virtual DbSet<Employee> Employees { get; set; }
@@ -114,6 +113,9 @@ public partial class DimaBaseContext : DbContext
             entity.Property(e => e.Fio)
                 .HasMaxLength(255)
                 .HasColumnName("FIO");
+            entity.Property(e => e.Image)
+                .HasColumnType("character varying")
+                .HasColumnName("image");
             entity.Property(e => e.LastEntry).HasColumnName("Last_Entry");
             entity.Property(e => e.Login).HasColumnType("character varying");
             entity.Property(e => e.Password).HasColumnType("character varying");

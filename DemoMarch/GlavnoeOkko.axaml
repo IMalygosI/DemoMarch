@@ -51,7 +51,14 @@
 				 Margin="10"
 				 Background="#92d050"
 				 BorderThickness="2"
-				 Name="ListBox_servise">	
+				 Name="ListBox_servise">
+
+			<ListBox.ContextMenu>
+				<ContextMenu>
+					<MenuItem Header="Добавить в корзину"
+							  Click="MenuItem_Click_Basket"/>
+				</ContextMenu>
+			</ListBox.ContextMenu>
 			
 			<ListBox.ItemTemplate>
 				<DataTemplate>
@@ -89,18 +96,30 @@
 			</ListBox.ItemTemplate>
 		</ListBox>
 
-		<Button Grid.Column="4"
-				HorizontalAlignment="Right"
-				VerticalAlignment="Top"
-				Margin="15"
-				Name="Logout"
+		<DockPanel Grid.Column="4"
+				   HorizontalAlignment="Right"
+				   VerticalAlignment="Top"
+				   Margin="15">
+
+			<Button Name="Baskeet"
+					Click="Button_Click_Baskeet"
+					Background="#349c3d">
+
+				<TextBlock Text="Корзина"
+						   Foreground="White"/>
+
+			</Button>
+		
+		<Button Name="Logout"
+				Margin="5 0 0 0"
 				Click="Button_Click_Logout"
 				Background="#349c3d">
 			
 			<TextBlock Text="Выйти"
 					   Foreground="White"/>
 			
-		</Button>		
-		
+		</Button>
+		</DockPanel>
+
 	</Grid>
 </Window>

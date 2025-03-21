@@ -44,6 +44,34 @@
 					   FontWeight="Bold"/>
 		</Grid>
 
+
+		<DockPanel Grid.Column="1"
+				   Grid.ColumnSpan="2"
+				   HorizontalAlignment="Left"
+				   VerticalAlignment="Center">
+
+			<ComboBox Margin="5"
+					  Name="BoxLogins"
+					  Width="250">
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding Login}"/>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
+
+			<ComboBox Margin="5"
+					  Name="BoxData"
+					  Width="250">
+				<ComboBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding LastEntry}"/>
+					</DataTemplate>
+				</ComboBox.ItemTemplate>
+			</ComboBox>
+		</DockPanel>
+		
+		
 		<ListBox Grid.ColumnSpan="5"
 				 Grid.Row="1"
 				 Grid.RowSpan="3"
